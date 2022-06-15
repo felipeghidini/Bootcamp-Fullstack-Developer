@@ -1,0 +1,15 @@
+<section class="d-flex align-items-center justify-content-center flex-wrap">
+  <div class="card my-2 mx-2" style="width: 18rem;" *ngFor="let personagem of personagens">
+    <img [src]="personagem.image" class="card-img-top" alt="Imagem de capa do card">
+    <div class="card-body">
+      <h5 class="card-title">{{ personagem.name }}</h5>
+      <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do
+        card.</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ personagem.gender }}</li>
+      <li class="list-group-item">{{ personagem.species }}</li>
+      <li class="list-group-item">{{ personagem.status }}</li>
+    </ul>
+  </div>
+</section>
