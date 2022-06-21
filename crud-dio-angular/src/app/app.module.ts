@@ -14,9 +14,14 @@ import { UserService } from './services/user.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataBindingComponent } from './pages/data-binding/data-binding.component';
 import { ButtonComponent } from './components/button/button.component';
-import { TodoListComponent } from './pages/todo-list/todo-list.component';
+import { TodoListComponent } from './pages/todo/todo-list/todo-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { TodoItemComponent } from './pages/todo/todo-item/todo-item.component';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +31,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     UserFormComponent,
     DataBindingComponent,
     ButtonComponent,
-    TodoListComponent
+    TodoListComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
     BrowserAnimationsModule,
     MatInputModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
