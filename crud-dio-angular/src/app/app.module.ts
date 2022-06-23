@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
 import { MatInputModule } from '@angular/material/input';
@@ -22,6 +22,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { PipesExampleComponent } from './pages/pipes-example/pipes-example.component';
+import { PrintListPipe } from './pipe/print-list.pipe';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { PipesExampleComponent } from './pages/pipes-example/pipes-example.compo
     ButtonComponent,
     TodoListComponent,
     TodoItemComponent,
-    PipesExampleComponent
+    PipesExampleComponent,
+    PrintListPipe
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,7 @@ import { PipesExampleComponent } from './pages/pipes-example/pipes-example.compo
     MatButtonModule,
     MatIconModule
   ],
-  providers: [UserService],
+  providers: [UserService, {provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
